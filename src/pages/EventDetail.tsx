@@ -99,6 +99,12 @@ const EventDetail = () => {
                   <span>{event.venue}</span>
                 </div>
               </div>
+              <div>
+                <p className="text-center mt-10 font-bold text-red-500 bg-gray-300 text-md rounded-sm p-5">
+                  Registrations are closed as all slots have been filled. We
+                  sincerely regret the inconvenience caused.
+                </p>
+              </div>
             </div>
 
             <div className="aspect-video rounded-lg overflow-hidden shadow-hover">
@@ -251,7 +257,7 @@ const EventDetail = () => {
                     </div>
                   </div>
 
-                  <Button
+                  {/* <Button
                     className="w-full"
                     variant="hero"
                     onClick={() =>
@@ -262,7 +268,16 @@ const EventDetail = () => {
                     }
                   >
                     Register Now
-                  </Button>
+                  </Button> */}
+
+                  <Separator />
+
+                  <div>
+                    <p className="text-center font-bold text-red-500">
+                      Registrations are closed as all slots have been filled.
+                    </p>
+                  </div>
+
                 </CardContent>
               </Card>
 
@@ -287,17 +302,17 @@ const EventDetail = () => {
                   {event.facultyCoordinator.name2 && (<Separator />)}
 
                   {event.facultyCoordinator.name2 && (
-                  <div className="space-y-2">
-                    <div className="font-semibold">
-                      {event.facultyCoordinator.name2}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-primary" />
-                      <span className="text-sm">
-                        {event.facultyCoordinator.contact2}
-                      </span>
-                    </div>
-                  </div> )}
+                    <div className="space-y-2">
+                      <div className="font-semibold">
+                        {event.facultyCoordinator.name2}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Phone className="h-4 w-4 text-primary" />
+                        <span className="text-sm">
+                          {event.facultyCoordinator.contact2}
+                        </span>
+                      </div>
+                    </div>)}
 
                   {event.facultyCoordinator.name3 && (<Separator />)}
 
